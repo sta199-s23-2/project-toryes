@@ -2,19 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.1.251">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project title</title>
+<title>STA199 Final Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -53,7 +58,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -66,7 +71,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -157,7 +162,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -190,7 +195,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project title</h1>
+<h1 class="title">STA199 Final Project</h1>
 <p class="subtitle lead">Proposal</p>
 </div>
 
@@ -207,18 +212,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyr' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'readr' was built under R version 4.2.2</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'purrr' was built under R version 4.2.2</code></pre>
-</div>
 </div>
 <section id="data-1" class="level1">
 <h1>Data 1</h1>
@@ -233,9 +226,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="research-question" class="level2">
 <h2 class="anchored" data-anchor-id="research-question">Research question</h2>
 <ul>
-<li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
-<li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
-<li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
+<li><p>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</p></li>
+<li><p>A description of the research topic along with a concise statement of your hypotheses on this topic.</p></li>
+<li><p>Identify the types of variables in your research question. Categorical? Quantitative?</p></li>
 </ul>
 </section>
 <section id="literature" class="level2">
@@ -249,7 +242,72 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="glimpse-of-data" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>FMR_data_2020 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/FY20_FMR.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 4766 Columns: 20
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr  (7): fips2010, metro_code, areaname, cousub, countyname, county_town_na...
+dbl (13): fmr_0, fmr_1, fmr_2, fmr_3, fmr_4, state, county, pop2017, acs_201...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>FMR_data_2023 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/FY23_FMR.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 4764 Columns: 14
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (7): fips, hud_area_name, hud_area_code, countyname, county_town_name, s...
+dbl (7): metro, pop2020, fmr_0, fmr_1, fmr_2, fmr_3, fmr_4
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(FMR_data_2020)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 4,766
+Columns: 20
+$ fips2010         &lt;chr&gt; "0100199999", "0100399999", "0100599999", "0100799999…
+$ fmr_0            &lt;dbl&gt; 583, 744, 477, 804, 804, 474, 474, 468, 486, 462, 594…
+$ fmr_1            &lt;dbl&gt; 702, 749, 481, 861, 861, 484, 521, 531, 593, 465, 627…
+$ fmr_2            &lt;dbl&gt; 830, 916, 633, 986, 986, 612, 612, 700, 683, 612, 714…
+$ fmr_3            &lt;dbl&gt; 1047, 1251, 789, 1291, 1291, 809, 782, 910, 887, 826,…
+$ fmr_4            &lt;dbl&gt; 1425, 1566, 925, 1425, 1425, 878, 993, 1072, 977, 829…
+$ state            &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
+$ metro_code       &lt;chr&gt; "METRO33860M33860", "METRO19300M19300", "NCNTY01005N0…
+$ areaname         &lt;chr&gt; "Montgomery, AL MSA", "Daphne-Fairhope-Foley, AL MSA"…
+$ county           &lt;dbl&gt; 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29…
+$ cousub           &lt;chr&gt; "99999", "99999", "99999", "99999", "99999", "99999",…
+$ countyname       &lt;chr&gt; "Autauga County", "Baldwin County", "Barbour County",…
+$ county_town_name &lt;chr&gt; "Autauga County", "Baldwin County", "Barbour County",…
+$ pop2017          &lt;dbl&gt; 55035, 203360, 26200, 22580, 57665, 10480, 20125, 115…
+$ acs_2019_2       &lt;dbl&gt; 825, 888, 666, 873, 873, 628, 628, 676, 691, 628, 628…
+$ state_alpha      &lt;chr&gt; "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL",…
+$ fmr_type         &lt;dbl&gt; 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 40, 4…
+$ metro            &lt;dbl&gt; 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0,…
+$ fmr_pct_chg      &lt;dbl&gt; 0.00606061, 0.03153150, -0.04955000, 0.12943872, 0.12…
+$ fmr_dollar_chg   &lt;dbl&gt; 5, 28, -33, 113, 113, -16, -16, 24, -8, -16, 86, -45,…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(FMR_data_2023)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 4,764
+Columns: 14
+$ fips             &lt;chr&gt; "0100199999", "0100399999", "0100599999", "0100799999…
+$ hud_area_name    &lt;chr&gt; "Montgomery, AL MSA", "Daphne-Fairhope-Foley, AL MSA"…
+$ hud_area_code    &lt;chr&gt; "METRO33860M33860", "METRO19300M19300", "NCNTY01005N0…
+$ countyname       &lt;chr&gt; "Autauga County", "Baldwin County", "Barbour County",…
+$ county_town_name &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ state            &lt;chr&gt; "01", "01", "01", "01", "01", "01", "01", "01", "01",…
+$ state_alpha      &lt;chr&gt; "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL",…
+$ metro            &lt;dbl&gt; 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0,…
+$ pop2020          &lt;dbl&gt; 55639, 218289, 25026, 22374, 57755, 10173, 19726, 114…
+$ fmr_0            &lt;dbl&gt; 716, 924, 558, 866, 866, 620, 576, 605, 688, 574, 617…
+$ fmr_1            &lt;dbl&gt; 817, 928, 562, 942, 942, 631, 664, 609, 692, 584, 634…
+$ fmr_2            &lt;dbl&gt; 977, 1206, 740, 1075, 1075, 820, 761, 802, 911, 759, …
+$ fmr_3            &lt;dbl&gt; 1241, 1534, 941, 1376, 1376, 999, 926, 1088, 1109, 95…
+$ fmr_4            &lt;dbl&gt; 1595, 1971, 994, 1494, 1494, 1229, 1022, 1178, 1224, …</code></pre>
+</div>
 </div>
 </section>
 </section>
@@ -266,9 +324,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="research-question-1" class="level2">
 <h2 class="anchored" data-anchor-id="research-question-1">Research question</h2>
 <ul>
-<li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
-<li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
-<li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
+<li><p>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</p></li>
+<li><p>A description of the research topic along with a concise statement of your hypotheses on this topic.</p></li>
+<li><p>Identify the types of variables in your research question. Categorical? Quantitative?</p></li>
 </ul>
 </section>
 <section id="literature-1" class="level2">
@@ -282,7 +340,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="glimpse-of-data-1" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data-1">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
@@ -291,31 +349,84 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="introduction-and-data-2" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-and-data-2">Introduction and data</h2>
 <ul>
-<li><p>Identify the source of the data.</p></li>
-<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p></li>
-<li><p>Write a brief description of the observations.</p></li>
+<li><p>Identify the source of the data.</p>
+<ul>
+<li>The data comes from NYC Slice, a dataset gathered by Liam Quigley, an independent New York City reporter.</li>
+</ul></li>
+<li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p>
+<ul>
+<li>Liam Quigley himself over an 8-year period gathered data on 464 pizza slices throughout New York City.</li>
+</ul></li>
+<li><p>Write a brief description of the observations.</p>
+<ul>
+<li>The variables included date, price, location, and style of pizza for 464 slices across New York City. Off first glance, it appears that price varied over the years (unsure whether or not there was a clear increase in price) and it seems that pepperoni pizzas generally tend to be more expensive.</li>
+</ul></li>
 </ul>
 </section>
 <section id="research-question-2" class="level2">
 <h2 class="anchored" data-anchor-id="research-question-2">Research question</h2>
 <ul>
-<li>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</li>
-<li>A description of the research topic along with a concise statement of your hypotheses on this topic.</li>
-<li>Identify the types of variables in your research question. Categorical? Quantitative?</li>
+<li><p>A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)</p>
+<ul>
+<li>Have pizza slices increased in price over time? How has the style of pizza impacted its price?</li>
+</ul></li>
+<li><p>A description of the research topic along with a concise statement of your hypotheses on this topic.</p>
+<ul>
+<li>Data on prices of pizza slices can reveal certain trends about the prices of everyday goods for everyday citizens and how changes in the US’s economy have impacted cost of living. With this being said, my hypothesis is that due to inflation, the price of pizza has clearly increased over the past 8 years.</li>
+</ul></li>
+<li><p>Identify the types of variables in your research question. Categorical? Quantitative?</p>
+<ul>
+<li>Date, price, and style of pizza. The style of pizza is categorical, while the date and price are quantitative.</li>
+</ul></li>
 </ul>
 </section>
 <section id="literature-2" class="level2">
 <h2 class="anchored" data-anchor-id="literature-2">Literature</h2>
 <ul>
-<li><p>Find one published credible article on the topic you are interested in researching.</p></li>
-<li><p>Provide a one paragraph summary about the article.</p></li>
-<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p></li>
+<li><p>Find one published credible article on the topic you are interested in researching.</p>
+<ul>
+<li>https://www.nytimes.com/2022/08/08/nyregion/inflation-nyc.html</li>
+</ul></li>
+<li><p>Provide a one paragraph summary about the article.</p>
+<ul>
+<li>This New York Times article provides multiple anecdotes from case studies of everyday New Yorkers who struggle with rising food costs due to inflation. Stories of five different New Yorkers across multiple boroughs provide context to the difficulties provided by rising inflation. The article also describes how recent global events such as the pandemic and the war in Ukraine have impacted the prices of food products.</li>
+</ul></li>
+<li><p>In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.</p>
+<ul>
+<li>The New York Times article presents great anecdotal evidence to rising food prices, but this dataset would contribute a more objective perspective to a common New York City food staple: pizza.</li>
+</ul></li>
 </ul>
 </section>
 <section id="glimpse-of-data-2" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data-2">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>nyc_slice <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/nyc_slice_rawdata.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 464 Columns: 11
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (7): Link to IG Post, Name, Date, Date Expanded (times in EST), Price, S...
+dbl (4): location_lat, location_lng, Year, Price as number
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(nyc_slice)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 464
+Columns: 11
+$ `Link to IG Post`              &lt;chr&gt; "https://www.instagram.com/p/CjszJ-fOP5…
+$ Name                           &lt;chr&gt; "Angelo’s Pizza", "Ozone Pizzeria", "Pi…
+$ location_lat                   &lt;dbl&gt; 40.62325, 40.68089, 40.60001, 40.71334,…
+$ location_lng                   &lt;dbl&gt; -73.93792, -73.84263, -73.99946, -73.82…
+$ Date                           &lt;chr&gt; "2022-1014", "2022-1008", "2022-1003", …
+$ `Date Expanded (times in EST)` &lt;chr&gt; "Oct 14th 2022, 5:57:51 pm", "Oct 8th 2…
+$ Year                           &lt;dbl&gt; 2022, 2022, 2022, 2022, 2022, 2022, 202…
+$ `Price as number`              &lt;dbl&gt; 3.00, 3.00, 2.75, 3.25, 1.00, 3.50, 3.0…
+$ Price                          &lt;chr&gt; "$3.00", "$3.00", "$2.75", "$3.25", "$1…
+$ Style                          &lt;chr&gt; "Plain", "Plain", "Plain", "Plain", "Pl…
+$ Notes                          &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA,…</code></pre>
+</div>
 </div>
 
 
@@ -392,7 +503,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
