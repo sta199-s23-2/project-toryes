@@ -90,25 +90,43 @@ glimpse(FMR_data_2023)
 
 -   Identify the source of the data.
 
+    -   The data comes from NYC Slice, a dataset gathered by Liam Quigley, an independent New York City reporter.
+
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
+    -   Liam Quigley himself over an 8-year period gathered data on 464 pizza slices throughout New York City.
+
 -   Write a brief description of the observations.
+
+    -   The variables included date, price, location, and style of pizza for 464 slices across New York City. Off first glance, it appears that price varied over the years (unsure whether or not there was a clear increase in price) and it seems that pepperoni pizzas generally tend to be more expensive.
 
 ## Research question
 
 -   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
+    -   Have pizza slices increased in price over time? How has the style of pizza impacted its price?
+
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
+    -   Data on prices of pizza slices can reveal certain trends about the prices of everyday goods for everyday citizens and how changes in the US's economy have impacted cost of living. With this being said, my hypothesis is that due to inflation, the price of pizza has clearly increased over the past 8 years.
+
 -   Identify the types of variables in your research question. Categorical? Quantitative?
+
+    -   Date, price, and style of pizza. The style of pizza is categorical, while the date and price are quantitative.
 
 ## Literature
 
 -   Find one published credible article on the topic you are interested in researching.
 
+    -   https://www.nytimes.com/2022/08/08/nyregion/inflation-nyc.html
+
 -   Provide a one paragraph summary about the article.
 
+    -   This New York Times article provides multiple anecdotes from case studies of everyday New Yorkers who struggle with rising food costs due to inflation. Stories of five different New Yorkers across multiple boroughs provide context to the difficulties provided by rising inflation. The article also describes how recent global events such as the pandemic and the war in Ukraine have impacted the prices of food products.
+
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+
+    -   The New York Times article presents great anecdotal evidence to rising food prices, but this dataset would contribute a more objective perspective to a common New York City food staple: pizza.
 
 ## Glimpse of data
 
