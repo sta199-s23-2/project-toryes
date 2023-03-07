@@ -50,7 +50,7 @@ library(tidyverse)
 
 -   Provide a one paragraph summary about the article.
 
-    -   This article does an overview of rent changes in the U.S and then discusses the county and zip codes with the highest rent increase. It looks closer at Arizona and San Francisco. 
+    -   This article does an overview of rent changes in the U.S and then discusses the county and zip codes with the highest rent increase. It looks closer at Arizona and San Francisco, finding that Maricopa and Pinal county In Arizona have the highest rent increase from 2020-2023, and that San Francisco have large rent differences by zip code.
 
 -   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
 
@@ -73,6 +73,8 @@ glimpse(FMR_data_2023)
 ## Introduction and data
 
 -   Identify the source of the data.
+
+    -   The United States Census Bureau has information regarding voter turnout and registration throughout the Current Population Survey from years 1994- 2020 focusing on the month of November. The data set is called CPS Voting Supplement in which one can select which years to view. 
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
