@@ -22,7 +22,7 @@ library(tidyverse)
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
-    -   The Department of Housing and Urban Development\'s Office of Public Development and Research (HUD\'s PD&R)
+    -   The Department of Housing and Urban Development's Office of Public Development and Research (HUD's PD&R)
 
 -   Write a brief description of the observations.
 
@@ -36,7 +36,7 @@ library(tidyverse)
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
-    -   The COVID-19 pandemic delivered a devastating blow to the economy, causing increased unemployment and inflation throughout the U.S. The cost of living has increased in multiple different states, and if we want to resolve this issue in North Carolina, we must understand the extent. By comparing North Carolina\'s data from 2019, 2020, 2021, and 2022, we will compare the changes in rent to test our hypothesis that rent increased Post-COVID and is making the cost of living unattainable. 
+    -   The COVID-19 pandemic delivered a devastating blow to the economy, causing increased unemployment and inflation throughout the U.S. The cost of living has increased in multiple different states, and if we want to resolve this issue in North Carolina, we must understand the extent. By comparing North Carolina's data from 2019, 2020, 2021, and 2022, we will compare the changes in rent to test our hypothesis that rent increased Post-COVID and is making the cost of living unattainable. 
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
@@ -46,7 +46,7 @@ library(tidyverse)
 
 -   Find one published credible article on the topic you are interested in researching.
 
-    -    **<https://usafacts.org/articles/where-are-rents-rising-post-covid-19/>**
+    -   [**https://usafacts.org/articles/where-are-rents-rising-post-covid-19/**](https://usafacts.org/articles/where-are-rents-rising-post-covid-19/){.uri}
 
 -   Provide a one paragraph summary about the article.
 
@@ -72,36 +72,42 @@ glimpse(FMR_data_2023)
 
 ## Introduction and data
 
--   Identify the source of the data.
+The United States Census Bureau has information regarding voter turnout and registration through the Current Population Survey (CPS) from 1994- 2020, focusing on November. The dataset is CPS Voting Supplement, in which one can create charts based on the variables provided by the CPS.
 
-    -   The United States Census Bureau has information regarding voter turnout and registration throughout the Current Population Survey from years 1994- 2020 focusing on the month of November. The data set is called CPS Voting Supplement in which one can select which years to view. 
+The data is collected through interviews, such as phone calls and/or in-person visits to ask the individual living in the residential address to answer questions regarding race, ethnicity, marital status, age, sex, etc. Some interviews follow up with residents over a longer period. 
 
--   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
-
--   Write a brief description of the observations.
+The Census Bureau allows one to select which type of data to view. The data we are observing is the racial and ethnic voter outcome of individuals that voted for per U.S state. On the rows, the data consists of 50 states, including the District of Columbia, based on five racial groups (White, Black, Asian, Hawaiian/Pacific Islander, and American Indian, Alaskan Native) and other mixed racial groups (White-Black, White-Asian, AI-Asian, etc.). On the columns, the data consists of "Did you vote," in which a responder can be classified as No response, Refused, Don't know, Not in Universe, Yes, and No. The individual observations consist of the population per racial category per response. 
 
 ## Research question
 
--   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
+**Based on the data presented, what can be concluded about voter turnout in the 2024 election per racial group? How do these outcomes differ based on presidential candidates and the political atmosphere? Does the data show racial inequities per group in different states?**
 
--   A description of the research topic along with a concise statement of your hypotheses on this topic.
+The U.S. is rooted in diversity and democracy practiced by Americans. During the 2016 election, there was a high voter turnout due to presidential candidates speaking out against marginalized communities. In the 2020 election, there was an over six million voter turnout increase. Over the years, racial inequities are highlighted through voter suppression, disenfranchisement, felon voting rights, voter ID laws, etc. These obstacles prevent Americans from marginalized communities from participating in civic engagement and voting. In addition, the Census continues to show an increasing number of citizens from diverse backgrounds in various states that alter the outcomes of elections. This data is important to analyze and determine the possible outcomes of the 2024 elections and to ensure states with higher levels of inequality assist marginalized communities.
 
--   Identify the types of variables in your research question. Categorical? Quantitative?
+The research topic will predict voter turnout for the 2024 election per racial group per state. These predicted turnouts will allow the researchers to view which states have higher levels of racial inequities to ensure these states strategize to provide ethnic equities. The team hypothesizes that voter turnout will increase due to the current political atmosphere. There is also a prediction that marginalized groups are likely to vote at higher rates than usual. 
+
+The data consists of categorical variables (states, racial group, responses to "did you vote") and quantitative outcomes (population per response, state, and racial category). 
 
 ## Literature
 
--   Find one published credible article on the topic you are interested in researching.
+[**https://www.brennancenter.org/our-work/analysis-opinion/large-racial-turnout-gap-persisted-2020-election**](https://www.brennancenter.org/our-work/analysis-opinion/large-racial-turnout-gap-persisted-2020-election)
 
--   Provide a one paragraph summary about the article.
+The "Large Racial Turnout Gap Persisted in 2020 Election" article discusses the voter outcome per racial group in the 2020 election. The reading states that Black, Asian, and Hispanic voters "surpassed their previous turnout records." In addition, their research stated there are gaps between white voters and voters of other racial groups. They also show how racial groups have changed their voter turnouts based on the candidates, such as in the 2008 and 2012 elections with Obama as a candidate who had the highest voter turnout for black individuals since 1996. 
 
--   In 1-2 sentences, explain how your research question builds on / is different than the article you have cited.
+This research is highly relevant in understanding states that have shifted the outcomes of voters per racial groups. Not only is it important to understand how voters are changing their outcomes, but also how political candidates are shifting the historical outcomes for marginalized racial groups. 
 
 ## Glimpse of data
 
 ```{r}
-#| label: load-data-2
+#| label: load-census-voter-turnout-data
 
-# add code here
+# Note: we slightly modified the csv files to remove metadata / source information
+voter_turnout_2016 <- read_csv("data/VoterTurnout2016.csv")
+voter_turnout_2020 <- read_csv("data/VoterTurnout2020.csv")
+
+glimpse(voter_turnout_2016)
+glimpse(voter_turnout_2020)
+
 ```
 
 # Data 3

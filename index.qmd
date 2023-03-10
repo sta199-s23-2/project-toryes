@@ -1,5 +1,5 @@
 ---
-title: "TEAM NAME"
+title: "Team Toryes"
 subtitle: "STA 199 Project"
 format: html
 editor: visual
