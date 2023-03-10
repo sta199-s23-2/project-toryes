@@ -36,7 +36,7 @@ library(tidyverse)
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
-    -   The COVID-19 pandemic delivered a devastating blow to the economy, causing increased unemployment and inflation throughout the U.S. The cost of living has increased in multiple different states, and if we want to resolve this issue in North Carolina, we must understand the extent. By comparing North Carolina's data from 2019, 2020, 2021, and 2022, we will compare the changes in rent to test our hypothesis that rent increased Post-COVID and is making the cost of living unattainable. 
+    -   The COVID-19 pandemic delivered a devastating blow to the economy, causing increased unemployment and inflation throughout the U.S. The cost of living has increased in multiple different states, and if we want to resolve this issue in North Carolina, we must understand the extent. By comparing North Carolina's data from 2019, 2020, 2021, and 2022, we will compare the changes in rent to test our hypothesis that rent increased Post-COVID and is making the cost of living unattainable.
 
 -   Identify the types of variables in your research question. Categorical? Quantitative?
 
