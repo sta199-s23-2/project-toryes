@@ -13,5 +13,3 @@ This project was developed by **Toryes** For [STA 199: Introduction to Data Scie
 -   Yadira Paz-Martinez: Yadira is a sophomore studying Public Policy and Human rights on the pre-law track. She is from Clinton, NC, and during her free time, she enjoys watching documentaries, cooking, and traveling with her friends.
 
 -   Rodricka Robinson is a junior on the pre-med track at Duke University. She studies Cultural Anthropology and Creative Writing. She is from New Orleans, Louisiana.
-
--   Team member 4: One sentence description of Team member 4 (e.g., year, major, etc.).
