@@ -18,7 +18,7 @@ library(tidyverse)
 
 -   Identify the source of the data.
 
-    -   Data was first collected in 1983 and has been collected every year since then. HUD used to use surveys of local housing markets to collect data, but now housing authorities conduct surveys on their behalf. They also accept telephone or mail surveys. 
+    -   Data was first collected in 1983 and has been collected every year since then. HUD used to use surveys of local housing markets to collect data, but now housing authorities conduct surveys on their behalf. They also accept telephone or mail surveys. (https://www.huduser.gov/portal/datasets/fmr.html)
 
 -   State when and how it was originally collected (by the original data curator, not necessarily how you found the data).
 
