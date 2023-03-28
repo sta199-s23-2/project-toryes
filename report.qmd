@@ -7,4 +7,25 @@ execute:
   echo: true
 ---
 
-Add project writeup here.
+Introduction and Data:
+
+-   Where does your data come from? How was it sampled? Description of Observations
+
+Methodology:
+
+-   How do you plan to answer your research question?
+
+    -   Pediction, Interfernce, both?
+
+Try to add additional variables!
+
+Results:
+
+-   What are you finding out?
+
+    -   Make sure that all results you generate are in-line with the research question you have asked.
+
+        \
+        \
+
+-   
