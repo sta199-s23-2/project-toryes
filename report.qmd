@@ -1,5 +1,5 @@
 ---
-title: "Project title"
+title: "How Have Covid Change Rent Prices In North Carolina?"
 subtitle: "Report"
 format: html
 editor: visual
