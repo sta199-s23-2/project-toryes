@@ -12,6 +12,6 @@ This project was developed by **Toryes** For [STA 199: Introduction to Data Scie
 
 -   Team member 3: One sentence description of Team member 3 (e.g., year, major, etc.).
 
--   Rodricka Robinson is a junior at Duke University on the pre-med track studying Cultural Anthropology and Creative Writing. She is from New Orleans, Louisiana.
+-   Rodricka Robinson is a junior on the pre-med track at Duke University. She studies Cultural Anthropology and Creative Writing. She is from New Orleans, Louisiana.
 
 -   Team member 4: One sentence description of Team member 4 (e.g., year, major, etc.).
