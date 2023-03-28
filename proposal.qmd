@@ -65,6 +65,7 @@ FMR_data_2020 <- read_csv("data/FY20_FMR.csv")
 FMR_data_2023 <- read_csv("data/FY23_FMR.csv")
 
 glimpse(FMR_data_2020)
+View(FMR_data_2020)
 glimpse(FMR_data_2023)
 ```
 

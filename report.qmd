@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD
 title: "How Have Covid Change Rent Prices In North Carolina?"
-=======
-title: "How Has Covid Changed Rent Prices In North Carolina?"
->>>>>>> 75ac553 (minor)
 subtitle: "Report"
 format: html
 editor: visual
