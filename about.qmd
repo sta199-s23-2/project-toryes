@@ -8,7 +8,7 @@ This project was developed by **Toryes** For [STA 199: Introduction to Data Scie
 
 -   Owen Jennings: Owen is a sophomore at Duke University studying computer science and biology. He is originally from Durham, North Carolina, but now lives in Indianapolis, IN. He enjoys playing pickleball and building things in his free time.
 
--   Team member 2: One sentence description of Team member 2 (e.g., year, major, etc.).
+-   Teddy Hur: Teddy is a sophomore studying public policy. He is from Irvine, California but currently lives in Washington Heights in New York City where his parents moved.
 
 -   Team member 3: One sentence description of Team member 3 (e.g., year, major, etc.).
 
