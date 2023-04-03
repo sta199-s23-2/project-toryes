@@ -9,19 +9,41 @@ execute:
 
 Introduction and Data:
 
--   Where does your data come from? How was it sampled? Description of Observations
+-   Where does your data come from? How was it sampled? Description of 
+Observations
+
+Data was first collected in 1983 and has been collected every year since then. 
+HUD used to use surveys of local housing markets to collect data, but now housing authorities conduct surveys on their behalf. They also accept telephone or mail
+surveys. 
+- Collected by: The Department of Housing and Urban Development's Office of Public Development and Research (HUD's PD&R)
+
+The data is divided by year then state and county. You can choose to view the 
+whole state or just the county. The variables are year, state, counties, zip code, efficiency, one-bedroom, two-bedroom, three-bedroom, four-bedroom, and FMR percentile.
+- The years, efficiency, one-bedroom, two-bedroom, three-bedroom, four-bedroom,
+and FMR percentile are quantitative variables. The state is a categorial variables.
 
 Methodology:
 
 -   How do you plan to answer your research question?
 
+I am defining post-Covid as 2022. To simplify the comparison, only 2019 and 2022 
+data from North Carolina will be used. The year 2019 will be directly compared to
+2022 to show an example of pre-Covid rent prices vs. post-Covid rent prices.
+The rent prices of the one-bedroom, two-bedroom, three-bedroom, four-bedroom 
+from these years will be used.
+
     -   Pediction, Interfernce, both?
+    
+We will verify our hypothesis using a linear regression model that looks
+how prices have changed in North Carolina as a result of Covid.
 
 Try to add additional variables!
 
 Results:
 
 -   What are you finding out?
+
+How has the cost of rent changed post-COVID in North Carolina?
 
     -   Make sure that all results you generate are in-line with the research question you have asked.
 
