@@ -7,35 +7,22 @@ execute:
   echo: true
 ---
 
-Introduction and Data:
+**Introduction and Data:**
 
--   Where does your data come from? How was it sampled? Description of Observations
+The introduction provides motivation and context for your research. Describe your topic (citing sources) Additionally, consider any potential ethical issues that you believe should be addressed (if any) regarding how your data were collected.
 
-Data was first collected in 1983 and has been collected every year since then. HUD used to use surveys of local housing markets to collect data, but now housing authorities conduct surveys on their behalf. They also accept telephone or mailsurveys. - Collected by: The Department of Housing and Urban Development's Office of Public Development and Research (HUD's PD&R)
+For this research project, we will be investing: How has the cost of rent changed post-COVID in North Carolina? The Covid-19 pandemic delivered a huge blow to the economy, as a result, there has been a steady increase in inflation despite pay rates remaining roughly the same (CITE). This has greatly increased the cost of living with rent prices skyrocketing in multiple states(CITE). To analyze the extend of the Covid-19 pandemic in North Carolina, our home state, we will compare the rent prices of the one-bedroom, two-bedroom, three-bedroom, four-bedroom from 2019 (pre-Covid) and 2022 (post-Covid). We hypothesized that rent prices from 2019 increased by 20% post-Covid.
 
-The data is divided by year then state and county. You can choose to view the whole state or just the county. The variables are year, state, counties, zip code, efficiency, one-bedroom, two-bedroom, three-bedroom, four-bedroom, and FMR percentile. - The years, efficiency, one-bedroom, two-bedroom, three-bedroom, four-bedroom, and FMR percentile are quantitative variables. The state is a categorial variables.
+We will use data collected by the Department of Housing and Urban Development's Office of Public Development and Research (HUD's PD&R). Data collection started in 1983 based on surveys of local housing markets. Now, housing authorities conduct surveys on their behalf, along with accepting telephone or mail surveys. Their full collection of data is divided by year then state and then county. There is also the option to view the full state or just the county. The variables included are zip code, efficiency, one-bedroom, two-bedroom, three-bedroom, four-bedroom, and FMR percentile. The variable efficiency is defined as "the ratio of the rent estimate for Efficiency Units to the rent estimate \[certain bedroom units\]" (CITE). It is based on "the average of the past three estimates from the most recent American Community Survey 5-Year releases"(CITE). The variables, years, efficiency, one-bedroom, two-bedroom, three-bedroom, four-bedroom, and FMR percentile are quantitative variables. The variable state is a categorical variable.
 
-Methodology:
+**Methodology:**
 
--   How do you plan to answer your research question?
+(The methodology section should include visualizations and summary statistics relevant to your research question. You should also justify the choice of statistical method(s) used to answer your research question. Prediction, Interference, both?)
 
-I am defining post-Covid as 2022. To simplify the comparison, only 2019 and 2022 data from North Carolina will be used. The year 2019 will be directly compared to 2022 to show an example of pre-Covid rent prices vs. post-Covid rent prices. The rent prices of the one-bedroom, two-bedroom, three-bedroom, four-bedroom from these years will be used.
+To test our hypothesis, we will use a linear regression model that looks how prices have changed in North Carolina as a result of Covid.
 
-    -   Pediction, Interfernce, both?
+(Try to add additional variables!)
 
-We will verify our hypothesis using a linear regression model that looks how prices have changed in North Carolina as a result of Covid.
+**Results:**
 
-Try to add additional variables!
-
-Results:
-
--   What are you finding out?
-
-How has the cost of rent changed post-COVID in North Carolina?
-
-    -   Make sure that all results you generate are in-line with the research question you have asked.
-
-        \
-        \
-
--   
+(Showcase how you arrived at answers to your research question using the techniques we have learned in class. Provide only the main results from your analysis)
