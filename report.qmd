@@ -26,6 +26,43 @@ To test our hypothesis, we will use a linear regression model that looks how pri
 **Results:**
 
 (Showcase how you arrived at answers to your research question using the techniques we have learned in class. Provide only the main results from your analysis)
+**We should compare 2020 to 2023**
+
+```{r} 
+#| label: load data
+
+library(tidyverse)
+library(tidymodels)
+
+# MAKE SURE TO EXPLAIN WHAT DATES ARE INCLUDED IN THE 2020 and 2023 datasets.
+rents_2020 <- read_csv("data/FY20_4050_FMRs_rev.csv")
+rents_2021 <- read_csv("data/FY21_4050_FMRs_rev.csv")
+rents_2022 <- read_csv("data/FY22_FMRs_revised.csv")
+rents_2023 <- read_csv("data/FY23_FMRs_revised.csv")
+
+View(rents_2020)
+View(rents_2022)
+
+# rents_2020 <- rents_2020 |>
+#   filter(state_alpha == "NC") |>
+#   mutate(year = 2020)
+# 
+# rents_2021 <- rents_2021 |>
+#   filter(state_alpha == "NC") |>
+#   mutate(year = 2021)
+# 
+# rents_2022 <- rents_2022 |>
+#   filter(state_alpha == "NC") |>
+#   mutate(year = 2022)
+# 
+# rents_2023 <- rents_2023 |>
+#   filter(state_alpha == "NC") |>
+#   mutate(year = 2023)
+# 
+# rents <- bind_rows(rents_2020, rents_2021)
+
+
+```
 
 **Sources:**
 
