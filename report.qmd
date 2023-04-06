@@ -178,13 +178,19 @@ decreasing |>
 
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
 #| label: box
+#| fig-height: 8
 
 rents |>
-  ggplot(aes(y = year, x = fmr, group = year)) +
-  geom_violin()
+  ggplot(aes(y = year, x = fmr, group = year, fill = as.factor(year))) +
+  geom_violin(show.legend = FALSE) +
+  facet_wrap(facets = vars(bedrooms), nrow = 5) +
+  labs(
+    x = "40 Percentile Fair Market Rents",
+    y = "Year",
+    title = "Fair Market Rents from 2020 to 2023\nbased on the number of bedrooms"
+  )
 ```
 
-**Peaks on violin** represent the mean fair market rents for accommodations from 0 to 4 bedrooms.
 
 
 ```{r}
