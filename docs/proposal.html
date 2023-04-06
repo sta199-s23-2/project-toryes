@@ -220,7 +220,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li><p>Identify the source of the data.</p>
 <ul>
-<li>Data was first collected in 1983 and has been collected every year since then. HUD used to use surveys of local housing markets to collect data, but now housing authorities conduct surveys on their behalf. They also accept telephone or mail surveys.&nbsp;</li>
+<li>Data was first collected in 1983 and has been collected every year since then. HUD used to use surveys of local housing markets to collect data, but now housing authorities conduct surveys on their behalf. They also accept telephone or mail surveys.&nbsp;(https://www.huduser.gov/portal/datasets/fmr.html)</li>
 </ul></li>
 <li><p>State when and how it was originally collected (by the original data curator, not necessarily how you found the data).</p>
 <ul>
@@ -269,7 +269,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="glimpse-of-data" class="level2">
 <h2 class="anchored" data-anchor-id="glimpse-of-data">Glimpse of data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>FMR_data_2020 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/FY20_FMR.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>FMR_data_2020 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/FY20_4050_FMRs_rev.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 4766 Columns: 20
 ── Column specification ────────────────────────────────────────────────────────
@@ -280,13 +280,13 @@ dbl (13): fmr_0, fmr_1, fmr_2, fmr_3, fmr_4, state, county, pop2017, acs_201...
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>FMR_data_2023 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/FY23_FMR.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>FMR_data_2023 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/FY23_FMRs_revised.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 4764 Columns: 14
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
-chr (7): fips, hud_area_name, hud_area_code, countyname, county_town_name, s...
-dbl (7): metro, pop2020, fmr_0, fmr_1, fmr_2, fmr_3, fmr_4
+chr (6): fips, hud_area_name, hud_area_code, countyname, county_town_name, s...
+dbl (8): State, metro, pop2020, fmr_0, fmr_1, fmr_2, fmr_3, fmr_4
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
@@ -325,7 +325,7 @@ $ hud_area_name    &lt;chr&gt; "Montgomery, AL MSA", "Daphne-Fairhope-Foley, AL 
 $ hud_area_code    &lt;chr&gt; "METRO33860M33860", "METRO19300M19300", "NCNTY01005N0…
 $ countyname       &lt;chr&gt; "Autauga County", "Baldwin County", "Barbour County",…
 $ county_town_name &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
-$ state            &lt;chr&gt; "01", "01", "01", "01", "01", "01", "01", "01", "01",…
+$ State            &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…
 $ state_alpha      &lt;chr&gt; "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL", "AL",…
 $ metro            &lt;dbl&gt; 1, 1, 0, 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0,…
 $ pop2020          &lt;dbl&gt; 55639, 218289, 25026, 22374, 57755, 10173, 19726, 114…

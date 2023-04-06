@@ -61,11 +61,10 @@ library(tidyverse)
 ```{r}
 #| label: fair-market-rent-data
 
-FMR_data_2020 <- read_csv("data/FY20_FMR.csv")
-FMR_data_2023 <- read_csv("data/FY23_FMR.csv")
+FMR_data_2020 <- read_csv("data/FY20_4050_FMRs_rev.csv")
+FMR_data_2023 <- read_csv("data/FY23_FMRs_revised.csv")
 
 glimpse(FMR_data_2020)
-View(FMR_data_2020)
 glimpse(FMR_data_2023)
 ```
 

@@ -1,13 +1,15 @@
 ---
 title: "How Have Covid Change Rent Prices In North Carolina?"
 subtitle: "Report"
-format: html
+format: 
+  html:
+    toc: false
 editor: visual
 execute:
   echo: true
 ---
 
-**Introduction and Data:**
+# Introduction and Data:
 
 For this research project, we will be investing: How has the cost of rent changed post-COVID in North Carolina? The Covid-19 pandemic delivered a huge blow to the economy, as a result, there has been a steady increase in inflation despite pay rates remaining roughly the same (CITE). This has greatly increased the cost of living with rent prices skyrocketing in multiple states(CITE). As college students, we want to analyze the extend of Covid-19's impact of rent prices in North Carolina, our home state. We will compare the rent prices of the one-bedroom, two-bedroom, three-bedroom, four-bedroom from 2019 (pre-Covid) and 2022 (post-Covid). We hypothesized that rent prices from 2019 increased by 20% post-Covid.
 
@@ -15,7 +17,7 @@ We will use data collected by the Department of Housing and Urban Development's 
 
 Ethical concerns may involved the tenants in the property being disturbed by survey collectors or numerous telephone calls requesting for surveys. Another issue with privacy could be that a lot of tenants may not want everyone to know the rent prices of the area they live in.
 
-**Methodology:**
+# Methodology:
 
 (The methodology section should include visualizations and summary statistics relevant to your research question. You should also justify the choice of statistical method(s) used to answer your research question. Prediction, Interference, both?)
 
@@ -23,16 +25,16 @@ To test our hypothesis, we will use a linear regression model that looks how pri
 
 (Try to add additional variables!)
 
-**Results:**
+# Results:
 
 (Showcase how you arrived at answers to your research question using the techniques we have learned in class. Provide only the main results from your analysis)
-**We should compare 2020 to 2023**
 
-```{r} 
+```{r, warning = FALSE, echo = FALSE, message = FALSE}
 #| label: load data
 
 library(tidyverse)
 library(tidymodels)
+library(knitr)
 
 # MAKE SURE TO EXPLAIN WHAT DATES ARE INCLUDED IN THE 2020 and 2023 datasets.
 rents_2020 <- read_csv("data/FY20_4050_FMRs_rev.csv")
@@ -40,29 +42,171 @@ rents_2021 <- read_csv("data/FY21_4050_FMRs_rev.csv")
 rents_2022 <- read_csv("data/FY22_FMRs_revised.csv")
 rents_2023 <- read_csv("data/FY23_FMRs_revised.csv")
 
-View(rents_2020)
-View(rents_2022)
 
-# rents_2020 <- rents_2020 |>
-#   filter(state_alpha == "NC") |>
-#   mutate(year = 2020)
-# 
-# rents_2021 <- rents_2021 |>
-#   filter(state_alpha == "NC") |>
-#   mutate(year = 2021)
-# 
-# rents_2022 <- rents_2022 |>
-#   filter(state_alpha == "NC") |>
-#   mutate(year = 2022)
-# 
-# rents_2023 <- rents_2023 |>
-#   filter(state_alpha == "NC") |>
-#   mutate(year = 2023)
-# 
-# rents <- bind_rows(rents_2020, rents_2021)
+# Modify_data function
+# Parameters: Rent data frame, year of data, state to analyze
+# Returns: A modified data frame with the following columns:
+# state_alpha, year, countyname, bedrooms, fmr_0, fmr_1, fmr_2, fmr_3, fmr_4
+modify_data <- function(data, inputYear, inputState) {
+   data |>
+    mutate(year = inputYear) |>
+    filter(state_alpha == inputState) |>
+    pivot_longer(
+      cols = fmr_0:fmr_4, 
+      names_to = "bedrooms",
+      values_to = "fmr", 
+      names_prefix = "fmr_"
+    ) |>
+    select(state_alpha, 
+           year, 
+           countyname,
+           bedrooms, 
+           fmr)
+}
+
+rents_2020 <- modify_data(rents_2020, 2020, "NC")
+rents_2021 <- modify_data(rents_2021, 2021, "NC")
+rents_2022 <- modify_data(rents_2022, 2022, "NC")
+rents_2023 <- modify_data(rents_2023, 2023, "NC")
+
+
+rents <- bind_rows(rents_2020, rents_2021, rents_2022, rents_2023)
 
 
 ```
+
+
+### Did rent increase in your county after COVID-19?
+**North Carolina counties where fair market rent increased from 2020 to 2023 [^longnote]**
+
+```{r, warning = FALSE, echo = FALSE, message = FALSE}
+#| label: graph data
+#| crop: true
+#| fig-height: 2
+#| fig-width: 10
+
+# calculate percent change since 2020
+
+rents <- rents |>
+  group_by(countyname, bedrooms) |>
+  arrange(year, .by_group = TRUE) |>
+  mutate(fmr_pct = ((fmr - first(fmr)) / first(fmr)) * 100)
+
+# calculate average change in fair market rent from 2020 to 2023 by county (irregardless of # bedrooms) 
+nc_counties <- urbnmapr::counties |>
+  filter(state_name == "North Carolina")
+means <- rents |>
+  group_by(year, countyname) |>
+  summarize(mean_rent = mean(fmr_pct)) |>
+  left_join(nc_counties, by = c("countyname"="county_name"))
+
+
+# https://urban-institute.medium.com/how-to-create-state-and-county-maps-easily-in-r-577d29300bb2
+
+means |>
+  filter(year == 2023) |>
+  filter(state_name == "North Carolina") |>
+  ggplot(mapping = aes(long, lat, group = group, fill = mean_rent)) +
+  geom_polygon(color = "#ffffff", size = .25) +
+  coord_map(projection = "albers",  lat0 = 35, lat1 = -80) +
+  theme(
+        panel.grid.major = element_blank(),  # remove major grid lines
+        panel.grid.minor = element_blank(),  # remove minor grid lines
+        panel.border = element_blank(),  # remove panel border
+        axis.line = element_blank(),  # remove axis lines
+        axis.text = element_blank(),  # remove axis text labels
+        axis.title = element_blank(), # remove axis titles
+        axis.ticks = element_blank()  # remove tick marks on both axes
+  ) +
+  scale_fill_gradientn(guide = guide_colorbar(title.position = "top"),
+                       colors = c("#1984c5", 
+                                  "#63bff0", 
+                                  "#a7d5ed", 
+                                  "#e2e2e2",
+                                  "#e1a692",
+                                  "#de6e56", 
+                                  "#e14b31", 
+                                  "#c23728")) +
+# Did rent increase in your county after COVID-19?
+# Counties where one-bedroom fair market rent increased from 2020 to 2023, adjusted for inflation
+  labs(fill = "Change in fair\nmarket rent (%)")
+
+```
+
+[^longnote]: Source: HUD Fair Market Rent Data. Change in fair market rent is calculated by finding the average percent change of fair market rents from 2020 to 2023 of 0 to 4 bedroom accommodations. 
+
+
+### Which counties in North Carolina had the largest rent increases after COVID-19?
+**North Carolina counties with fair market rent increasing by 25% or more from 2020 to 2023**
+
+```{r, warning = FALSE, echo = FALSE, message = FALSE}
+#| label: report highest increase counties
+
+high_increase <- means |>
+  filter(year == 2023) |>
+  distinct(countyname, mean_rent, .keep_all = TRUE) |>
+  filter(mean_rent >= 25) |>
+  ungroup() |>
+  select(countyname, mean_rent) |>
+  arrange(desc(mean_rent))
+
+colnames(high_increase) <- c("County Name", "Change in Fair Market Price (%)")
+
+high_increase |>
+  kable()
+```
+### Which counties in North Carolina had the largest rent increases after COVID-19?
+**North Carolina counties with fair market rent decreasing from 2020 to 2023**
+
+```{r, warning = FALSE, echo = FALSE, message = FALSE}
+#| label: report decrease counties
+
+decreasing <- means |>
+  filter(year == 2023) |>
+  distinct(countyname, mean_rent, .keep_all = TRUE) |>
+  filter(mean_rent <= 0) |>
+  ungroup() |>
+  select(countyname, mean_rent) |>
+  arrange(mean_rent)
+
+colnames(decreasing) <- c("County Name", "Change in Fair Market Price (%)")
+
+decreasing |>
+  kable()
+```
+
+
+```{r, warning = FALSE, echo = FALSE, message = FALSE}
+#| label: box
+
+rents |>
+  ggplot(aes(y = year, x = fmr, group = year)) +
+  geom_violin()
+```
+
+**Peaks on violin** represent the mean fair market rents for accommodations from 0 to 4 bedrooms.
+
+
+```{r}
+rent_averages <- rents |>
+  group_by(year, bedrooms) |>
+  summarize(mean = mean(fmr)) |>
+  mutate(year = year - 2020)
+
+rent_averages |>
+  kable()
+
+regression <- linear_reg() |>
+  set_engine("lm") |>
+  fit(mean ~ year + bedrooms, data = rent_averages)
+
+regression |>
+  tidy() |>
+  kable()
+
+glance(regression)$r.squared
+```
+
 
 **Sources:**
 
