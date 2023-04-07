@@ -25,11 +25,6 @@ To test our hypothesis, we will use a linear regression model that looks how pri
 
 (Try to add additional variables!)
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> refs/remotes/origin/main
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
 #| label: load data
 
@@ -215,11 +210,8 @@ glance(regression)$r.squared
 
 # Results:
 
-<<<<<<< HEAD
-(Showcase how you arrived at answers to your research question using the techniques we have learned in class. Provide only the main results from your analysis) 
-=======
 (Showcase how you arrived at answers to your research question using the techniques we have learned in class. Provide only the main results from your analysis)
->>>>>>> refs/remotes/origin/main
+
 
 **Sources:**
 
