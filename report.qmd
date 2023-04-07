@@ -19,11 +19,7 @@ Ethical concerns may involve the tenants in the property being disturbed by surv
 
 # Methodology:
 
-(The methodology section should include visualizations and summary statistics relevant to your research question. You should also justify the choice of statistical method(s) used to answer your research question. Prediction, Interference, both?)
-
 To test our hypothesis, we will use a linear regression model that looks how prices have changed in North Carolina as a result of COVID.
-
-(Try to add additional variables!)
 
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
 #| label: load data
@@ -209,9 +205,6 @@ glance(regression)$r.squared
 ```
 
 # Results:
-
-(Showcase how you arrived at answers to your research question using the techniques we have learned in class. Provide only the main results from your analysis)
-
 
 **Sources:**
 
