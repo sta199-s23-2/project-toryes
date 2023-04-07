@@ -207,14 +207,40 @@ regression |>
 glance(regression)$r.squared
 ```
 
+The linear regression model above can be used to find **estimate mean** fair market rents based on our data, if the trend in prices continues, even as the effects COVID-19 dwindle. From the linear regression model we can write an equation to estimate the mean fair market rents based on the number of years that have passed since 2020 and the number of bedrooms for the accommodation.
+
+$$
+\widehat{fmr} = (50.36 * years\_since\_2020) + 606.12 
+$$
+
+$$
++ (22.56 * one\_bedroom) + (177.24 * two\_bedroom) + (448.62 * three\_bedroom) + (680.97 * four\_bedroom)
+$$
+
+*where one_bedroom, two_bedroom, three_bedroom, and four_bedroom are Boolean values that represent if the fair market rent based on the number of bedrooms.*
+
+Using the above linear regression model, we can find the estimate mean fair market rent (fmr) for a specified year and number of bedrooms. This prediction or estimate will be based on our data from 2020 through 2023 that we used in our data analysis. 
+
+For example, if we would like to predict the fair market rent of a 2 bedroom accommodation in the year 2024, we can use our linear regression model to predict the price assuming that the conditions from the years 2020 through 2023 hold:
+
+$$
+\widehat{fmr} = (50.36 * 4) + 606.12 + (177.24 * two\_bedroom)
+$$
+$$
+\widehat{fmr} = (50.36 * 4) + 606.12 + (177.24 * 1)
+$$
+$$
+\widehat{fmr} = 984.8
+$$
+In conclusion, from our linear regression model based on the mean FMRs from the years 2020 through 2023 in North Carolina, we can predict that a 2 bedroom accommodation in the year 2024 in North Carolina will have an estimate mean fair market rent of 984.8 dollars, holding all else constant.
+
 # Results:
 
-We started with understanding the rent increases per county after COVID-19. The results of the change in fair market rent % shows that numerous amounts of states increased their percentages. One state had a 40% change in FMR, and one state had a -10% change in FRM. Most states had a percent change of about 15-30% change. Our thesis estimated about a 20% increase post-COVID in which these results survey that the average change was about 25%. 
+We started with understanding the rent increases per county after COVID-19. The results of the change in fair market rent % shows that numerous amounts of states increased their percentages. One state had a 40% change in FMR, and one state had a -10% change in FRM. Most states had a percent change of about 15-30% change. Our thesis estimated about a 20% increase post-COVID in which these results survey that the average change was about 25%.
 
-We also researched which countries in NC has the largest rent increases after COVID-19. Based on our outcomes, the research indicates that Transylvania Country has the highest change in FMR, resting at 41.53% change. On the contrary we also calculated the countries in NC with the lowest rent increases after COVID-19. Camden County with -12.9% and Hyde County with -3.93 percent change. Furthermore, we decided to dive into the FMR from 2020-2023 based on the number of bedrooms. Based on the results, each year gradually, all housing, regardless of the number of rooms increased. 
+We also researched which countries in NC has the largest rent increases after COVID-19. Based on our outcomes, the research indicates that Transylvania Country has the highest change in FMR, resting at 41.53% change. On the contrary we also calculated the countries in NC with the lowest rent increases after COVID-19. Camden County with -12.9% and Hyde County with -3.93 percent change. Furthermore, we decided to dive into the FMR from 2020-2023 based on the number of bedrooms. Based on the results, each year gradually, all housing, regardless of the number of rooms increased.
 
 Our data analysis does not change the fair market rents increases or decreases to account for changes in inflation. We can improve on our analysis in the future by looking the fair market rents in North Carolina adjusted to account for inflation. Calculating the percent change in rents adjusted for inflation might allow us to make further conclusions, such as which counties in the state were the most impacted by COVID-19.
-
 
 **Sources:**
 
