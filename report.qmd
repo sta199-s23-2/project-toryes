@@ -25,9 +25,7 @@ To test our hypothesis, we will use a linear regression model that looks how pri
 
 (Try to add additional variables!)
 
-# Results:
 
-(Showcase how you arrived at answers to your research question using the techniques we have learned in class. Provide only the main results from your analysis)
 
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
 #| label: load data
@@ -75,9 +73,11 @@ rents <- bind_rows(rents_2020, rents_2021, rents_2022, rents_2023)
 
 ```
 
-
 ### Did rent increase in your county after COVID-19?
-**North Carolina counties where fair market rent increased from 2020 to 2023 [^longnote]**
+
+**North Carolina counties where fair market rent increased from 2020 to 2023** [^1]
+
+[^1]: **Source: HUD Fair Market Rent Data. Change in fair market rent is calculated by finding the average percent change of fair market rents from 2020 to 2023 of 0 to 4 bedroom accommodations.**
 
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
 #| label: graph data
@@ -133,10 +133,8 @@ means |>
 
 ```
 
-[^longnote]: Source: HUD Fair Market Rent Data. Change in fair market rent is calculated by finding the average percent change of fair market rents from 2020 to 2023 of 0 to 4 bedroom accommodations. 
-
-
 ### Which counties in North Carolina had the largest rent increases after COVID-19?
+
 **North Carolina counties with fair market rent increasing by 25% or more from 2020 to 2023**
 
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
@@ -155,7 +153,9 @@ colnames(high_increase) <- c("County Name", "Change in Fair Market Price (%)")
 high_increase |>
   kable()
 ```
+
 ### Which counties in North Carolina had the largest rent increases after COVID-19?
+
 **North Carolina counties with fair market rent decreasing from 2020 to 2023**
 
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
@@ -175,7 +175,6 @@ decreasing |>
   kable()
 ```
 
-
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
 #| label: box
 #| fig-height: 8
@@ -190,8 +189,6 @@ rents |>
     title = "Fair Market Rents from 2020 to 2023\nbased on the number of bedrooms"
   )
 ```
-
-
 
 ```{r}
 rent_averages <- rents |>
@@ -213,6 +210,9 @@ regression |>
 glance(regression)$r.squared
 ```
 
+# Results:
+
+(Showcase how you arrived at answers to your research question using the techniques we have learned in class. Provide only the main results from your analysis)
 
 **Sources:**
 
