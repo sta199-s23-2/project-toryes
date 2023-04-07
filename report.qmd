@@ -17,6 +17,9 @@ We will use data collected by the Department of Housing and Urban Development's 
 
 Ethical concerns may involve the tenants in the property being disturbed by survey collectors or numerous telephone calls requesting for surveys. Another issue with privacy could be that tenants may not want everyone to know the rent prices of the area they live in. There is also an ethical concern regarding the areas and individuals being surveyed and how those results could alter rent prices alongside inflation.
 
+# Literature Review: 
+This article does an overview of rent changes in the U.S and then discusses the county and zip codes with the highest rent increase. It looks closer at Arizona and San Francisco, finding that Maricopa and Pinal county In Arizona have the highest rent increase from 2020-2023, and that San Francisco have large rent differences by zip code.
+
 # Methodology:
 
 To test our hypothesis, we will use a linear regression model that looks how prices have changed in North Carolina as a result of COVID.
