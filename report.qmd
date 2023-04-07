@@ -212,7 +212,7 @@ glance(regression)$r.squared
 
 # Results:
 
-(Showcase how you arrived at answers to your research question using the techniques we have learned in class. Provide only the main results from your analysis)
+(Showcase how you arrived at answers to your research question using the techniques we have learned in class. Provide only the main results from your analysis) 
 
 **Sources:**
 
