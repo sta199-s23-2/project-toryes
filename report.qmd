@@ -76,8 +76,8 @@ rents <- bind_rows(rents_2020, rents_2021, rents_2022, rents_2023)
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
 #| label: graph data
 #| crop: true
-#| fig-height: 2
-#| fig-width: 10
+#| fig-height: 4
+#| fig-width: 12
 
 # calculate percent change since 2020
 
