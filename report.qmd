@@ -1,5 +1,5 @@
 ---
-title: "How Have Covid Change Rent Prices In North Carolina?"
+title: "COVID-19 Impacts on Rent Prices in North Carolina"
 subtitle: "Report"
 format: 
   html:
