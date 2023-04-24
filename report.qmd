@@ -41,8 +41,6 @@ This article does an overview of rent changes in the U.S. and then discusses the
 
 # Methodology:
 
-To test our hypothesis, we will use a linear regression model that looks how prices have changed in North Carolina as a result of COVID.
-
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
 #| label: load data
 
@@ -203,7 +201,7 @@ rents |>
                            "3" = "3 Bedrooms",
                            "4" = "4 Bedrooms"
                            )) |>
-  ggplot(aes(x = year, y = fmr, group = year, fill = as.factor(year))) +
+  ggplot(aes(y = year, x = fmr, group = year, fill = as.factor(year))) +
   geom_violin(show.legend = FALSE) +
   facet_wrap(facets = vars(bedrooms), nrow = 5) +
   labs(
@@ -212,6 +210,8 @@ rents |>
     title = "Fair Market Rents from 2020 to 2023\nbased on the number of bedrooms"
   )
 ```
+
+To test our hypothesis, we will use a linear regression model that looks how prices have changed in North Carolina as a result of COVID.
 
 ```{r}
 rent_averages <- rents |>
