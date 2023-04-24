@@ -259,7 +259,7 @@ $$ In conclusion, from our linear regression model based on the mean FMRs from t
 
 # Results:
 
-We started with understanding the rent increases per county after COVID-19. The results of the change in fair market rent % shows that numerous amounts of states increased their percentages. One state had a 40% change in FMR, and one state had a -10% change in FRM. Most states had a percent change of about 15-30% change. Our thesis estimated about a 20% increase post-COVID in which these results survey that the average change was about 25%.
+We started with understanding the rent increases per county after COVID-19. The results of the change in fair market rent % shows that numerous amounts of county increased their percentages. One county had a 40% change in FMR, and one state had a -10% change in FRM. Most counties had a percent change of about 15-30% change. Our thesis estimated about a 20% increase post-COVID in which these results survey that the average change was about 25%.
 
 We also researched which countries in NC has the largest rent increases after COVID-19. Based on our outcomes, the research indicates that Transylvania Country has the highest change in FMR, resting at 41.53% change. On the contrary we also calculated the countries in NC with the lowest rent increases after COVID-19. Camden County with -12.9% and Hyde County with -3.93 percent change. Furthermore, we decided to dive into the FMR from 2020-2023 based on the number of bedrooms. Based on the results, each year gradually, all housing, regardless of the number of rooms increased.
 
