@@ -1,20 +1,11 @@
 <!-- ██ ███    ███ ██████   ██████  ██████  ████████  █████  ███    ██ ████████  -->
-
 <!-- ██ ████  ████ ██   ██ ██    ██ ██   ██    ██    ██   ██ ████   ██    ██     -->
-
 <!-- ██ ██ ████ ██ ██████  ██    ██ ██████     ██    ███████ ██ ██  ██    ██     -->
-
 <!-- ██ ██  ██  ██ ██      ██    ██ ██   ██    ██    ██   ██ ██  ██ ██    ██     -->
-
 <!-- ██ ██      ██ ██       ██████  ██   ██    ██    ██   ██ ██   ████    ██     -->
 
 <!-- BEFORE RENDERING: DOWNLOAD urbnmapr PACKAGE -->
-<<<<<<< HEAD
 <!-- Run console command: devtools::install_github("UrbanInstitute/urbnmapr") -->
-=======
-
-<!-- Run command: devtools::install_github("UrbanInstitute/urbnmapr") -->
->>>>>>> 9100b9f6019c4e12ad9f07ff8877b929ddda708c
 
 ---
 title: "COVID-19 Impacts on Rent Prices in North Carolina"
