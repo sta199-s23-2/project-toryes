@@ -5,7 +5,7 @@
 <!-- ██ ██      ██ ██       ██████  ██   ██    ██    ██   ██ ██   ████    ██     -->
 
 <!-- BEFORE RENDERING: DOWNLOAD urbnmapr PACKAGE -->
-<!-- Run command: devtools::install_github("UrbanInstitute/urbnmapr") -->
+<!-- Run console command: devtools::install_github("UrbanInstitute/urbnmapr") -->
 
 ---
 title: "COVID-19 Impacts on Rent Prices in North Carolina"
@@ -187,7 +187,14 @@ decreasing |>
 #| fig-height: 8
 
 rents |>
-  ggplot(aes(y = year, x = fmr, group = year, fill = as.factor(year))) +
+  mutate(bedrooms = recode(bedrooms, 
+                           "0" = "0 Bedroom", 
+                           "1" = "1 Bedroom", 
+                           "2" = "2 Bedrooms",
+                           "3" = "3 Bedrooms",
+                           "4" = "4 Bedrooms"
+                           )) |>
+  ggplot(aes(x = year, y = fmr, group = year, fill = as.factor(year))) +
   geom_violin(show.legend = FALSE) +
   facet_wrap(facets = vars(bedrooms), nrow = 5) +
   labs(
