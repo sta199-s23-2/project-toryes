@@ -1,10 +1,15 @@
 <!-- ██ ███    ███ ██████   ██████  ██████  ████████  █████  ███    ██ ████████  -->
+
 <!-- ██ ████  ████ ██   ██ ██    ██ ██   ██    ██    ██   ██ ████   ██    ██     -->
+
 <!-- ██ ██ ████ ██ ██████  ██    ██ ██████     ██    ███████ ██ ██  ██    ██     -->
+
 <!-- ██ ██  ██  ██ ██      ██    ██ ██   ██    ██    ██   ██ ██  ██ ██    ██     -->
+
 <!-- ██ ██      ██ ██       ██████  ██   ██    ██    ██   ██ ██   ████    ██     -->
 
 <!-- BEFORE RENDERING: DOWNLOAD urbnmapr PACKAGE -->
+
 <!-- Run console command: devtools::install_github("UrbanInstitute/urbnmapr") -->
 
 ---
@@ -29,6 +34,8 @@ We will use data collected by the Department of Housing and Urban Development's 
 Ethical concerns may involve the tenants in the property being disturbed by survey collectors or numerous telephone calls requesting for surveys. Another issue with privacy could be that tenants may not want everyone to know the rent prices of the area they live in. There is also an ethical concern regarding the areas and individuals being surveyed and how those results could alter rent prices alongside inflation.
 
 # Literature Review:
+
+https://usafacts.org/articles/where-are-rents-rising-post-covid-19/
 
 This article does an overview of rent changes in the U.S. and then discusses the county and zip codes with the highest rent increase. It looks closer at Arizona and San Francisco, finding that Maricopa and Pinal counties in Arizona have the highest rent increase from 2020-2023 and that San Francisco has large rent differences by zip code. This literature also discusses in-depth the functions of FMR and how they measure final rent prices. This reading shows that COVID-19 increased rent prices but also had some outliers of counties with decreasing rent price changes.
 
@@ -267,3 +274,5 @@ https://www.cbpp.org/research/poverty-and-inequality/tracking-the-covid-19-econo
 https://www.huduser.gov/portal/datasets/fmr.html
 
 https://www.whitehouse.gov/cea/written-materials/2021/04/12/pandemic-prices-assessing-inflation-in-the-months-and-years-ahead/
+
+https://usafacts.org/articles/where-are-rents-rising-post-covid-19/
