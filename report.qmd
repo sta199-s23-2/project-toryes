@@ -43,14 +43,14 @@ This article does an overview of rent changes in the U.S. and then discusses the
 
 Below is an explanation of the variables we will use to create our visualizations and models. Our variables were derived from a pivoted version of the Department of Housing and Urban Development's Office of Public Development and Research data set for the years 2020 through 2023.
 
-| Variable Name | Explanation                                                                                                                                                                                                    |
+| Variable Name | Explanation                                                                                                                                                                                                     |
 |--------------------------|----------------------------------------------|
-| fmr           | The fair market rent as described above for a specified number of bedrooms and year.                                                                                                                           |
-| bedrooms      | The bedrooms variable indicates the number of bedrooms for a specific fair market rent value.                                                                                                                  |
-| countyname    | The county name for a specific fair market rent value.                                                                                                                                                         |
-| year          | The fiscal year for which data used to calculate the fair market rent value was collected.                                                                                                                     |
-| state_alpha   | The state for a specific fair market rent value. In our analysis, we focused on North Carolina, so all of our observations had a state_alpha equal to "NC".                                                    |
-| fmr_pct       | fmr_pct is a variable that we calculated in our analysis to use in our map graph. It represents the average change in fair market rent from 2020 for a specified year by county (irregardless of \# bedrooms)  |
+| fmr           | The fair market rent as described above for a specified number of bedrooms and year.                                                                                                                            |
+| bedrooms      | The bedrooms variable indicates the number of bedrooms for a specific fair market rent value.                                                                                                                   |
+| countyname    | The county name for a specific fair market rent value.                                                                                                                                                          |
+| year          | The fiscal year for which data used to calculate the fair market rent value was collected.                                                                                                                      |
+| state_alpha   | The state for a specific fair market rent value. In our analysis, we focused on North Carolina, so all of our observations had a state_alpha equal to "NC".                                                     |
+| fmr_pct       | fmr_pct is a variable that we calculated in our analysis to use in our map graph. It represents the average change in fair market rent from 2020 for a specified year by county (irregardless of \# bedrooms) . |
 
 # Methodology:
 
@@ -243,7 +243,7 @@ regression |>
   tidy() |>
   kable()
 
-glance(regression)$r.squared
+glance(regression)$adj.r.squared
 ```
 
 The linear regression model above can be used to find **estimate mean** fair market rents based on our data, if the trend in prices continues, even as the effects COVID-19 dwindle. From the linear regression model we can write an equation to estimate the mean fair market rents based on the number of years that have passed since 2020 and the number of bedrooms for the accommodation.
@@ -253,7 +253,11 @@ $$
 $$
 
 $$
-+ (22.56 * one\_bedroom) + (177.24 * two\_bedroom) + (448.62 * three\_bedroom) + (680.97 * four\_bedroom)
++\space(22.56 * one\_bedroom) + (177.24 * two\_bedroom)
+$$
+
+$$
++\space(448.62 * three\_bedroom) + (680.97 * four\_bedroom)
 $$
 
 *where one_bedroom, two_bedroom, three_bedroom, and four_bedroom are Boolean values that represent if the fair market rent based on the number of bedrooms.*
