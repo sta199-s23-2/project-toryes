@@ -207,8 +207,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Below is an explanation of the variables we will use to create our visualizations and models. Our variables were derived from a pivoted version of the Department of Housing and Urban Development’s Office of Public Development and Research data set for the years 2020 through 2023.</p>
 <table class="table">
 <colgroup>
-<col style="width: 36%">
-<col style="width: 63%">
+<col style="width: 16%">
+<col style="width: 83%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -547,9 +547,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(regression)<span class="sc">$</span>r.squared</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(regression)<span class="sc">$</span>adj.r.squared</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.9945113</code></pre>
+<pre><code>[1] 0.9925511</code></pre>
 </div>
 </div>
 <p>The linear regression model above can be used to find <strong>estimate mean</strong> fair market rents based on our data, if the trend in prices continues, even as the effects COVID-19 dwindle. From the linear regression model we can write an equation to estimate the mean fair market rents based on the number of years that have passed since 2020 and the number of bedrooms for the accommodation.</p>
@@ -557,7 +557,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 \widehat{fmr} = (50.36 * years\_since\_2020) + 606.12
 \]</span></p>
 <p><span class="math display">\[
-+ (22.56 * one\_bedroom) + (177.24 * two\_bedroom) + (448.62 * three\_bedroom) + (680.97 * four\_bedroom)
++\space(22.56 * one\_bedroom) + (177.24 * two\_bedroom)
+\]</span></p>
+<p><span class="math display">\[
++\space(448.62 * three\_bedroom) + (680.97 * four\_bedroom)
 \]</span></p>
 <p><em>where one_bedroom, two_bedroom, three_bedroom, and four_bedroom are Boolean values that represent if the fair market rent based on the number of bedrooms.</em></p>
 <p>Using the above linear regression model, we can find the estimate mean fair market rent (fmr) for a specified year and number of bedrooms. This prediction or estimate will be based on our data from 2020 through 2023 that we used in our data analysis.</p>

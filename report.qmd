@@ -44,7 +44,7 @@ This article does an overview of rent changes in the U.S. and then discusses the
 Below is an explanation of the variables we will use to create our visualizations and models. Our variables were derived from a pivoted version of the Department of Housing and Urban Development's Office of Public Development and Research data set for the years 2020 through 2023.
 
 | Variable Name | Explanation                                                                                                                                                                                                     |
-|--------------------------|----------------------------------------------|
+|------------|-----------------------------------------------------------|
 | fmr           | The fair market rent as described above for a specified number of bedrooms and year.                                                                                                                            |
 | bedrooms      | The bedrooms variable indicates the number of bedrooms for a specific fair market rent value.                                                                                                                   |
 | countyname    | The county name for a specific fair market rent value.                                                                                                                                                          |
