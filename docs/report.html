@@ -193,22 +193,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="introduction" class="level1">
 <h1>Introduction:</h1>
 <p>For this research project, we will be investigating how the COVID-19 pandemic impacted fair market rents throughout the state of North Carolina. The COVID-19 pandemic delivered a huge blow to the economy and as a result there has been a steady increase in inflation despite pay rates remaining roughly the same (Bernstein and Tedeschi). This has greatly increased the cost of living with rent prices skyrocketing in multiple states (Bernstein and Tedeschi).</p>
-<p>As proud Cameron Crazies, we want to analyze the extent of COVID-19’s impact of rent prices in our own home state of North Carolina. We will compare the FMR prices of one-bedroom, two-bedroom, three-bedroom, and four-bedroom across different North Carolinan counties from 2020-2023.</p>
+<p>As proud Cameron Crazies, we want to analyze the extent of COVID-19’s impact of rent prices in our own home state of North Carolina. We will compare the FMR prices of zero-bedroom, one-bedroom, two-bedroom, three-bedroom, and four-bedroom across different North Carolinians counties from 2020-2023.</p>
 <p>We will use data collected by the Department of Housing and Urban Development’s Office of Public Development and Research (HUD’s PD&amp;R). HUD PD&amp;R Data collection started in 1983 based on surveys of local housing markets. Now, housing authorities conduct surveys on their behalf, along with accepting telephone or mail surveys. Their full collection of data is divided by year, then state, and then county. For the purposes of our project, we only included data from North Carolina to compare between NC counties. Our data set’s variables include state, year, county name, number of bedrooms, and Fair Market Rent (FMR) price. FMR is the amount an individual is likely to pay for rent in a particular area based on the term length listed by the landlord (HUD). They “are estimates of 40th percentile gross rents for standard quality units within a metropolitan area or nonmetropolitan county.” In addition, the “year” variable for FMR’s is based off fiscal year, which is from October 1 of the previous year to September 30th of the current year (for example FY 2020 consists of data from 10/1/19 to 9/30/20).</p>
-<p>Ethical concerns may involve the tenants in the property being disturbed by survey collectors or numerous telephone calls requesting for surveys. Another issue with privacy could be that tenants may not want everyone to know the rent prices of the area they live in. There is also an ethical concern regarding the areas and individuals being surveyed and how those results could alter rent prices alongside inflation.</p>
+<p>Ethical concerns may involve the tenants in the property being disturbed by survey collectors or numerous telephone calls requesting for surveys. Another issue with privacy could be that tenants may not want everyone to know the rent prices of the area they live in. There is also an ethical concern regarding the areas and individuals being surveyed and how those results could alter rent prices alongside inflation.cFor our hypothesis, we predict that most North Carolina counties saw an increase in 20% in Fair Market Rent Prices.</p>
+<p>For our hypothesis, we predict that most North Carolina counties saw an increase in 20% in Fair Market Rent Prices.</p>
 </section>
 <section id="literature-review" class="level1">
 <h1>Literature Review:</h1>
 <p>https://usafacts.org/articles/where-are-rents-rising-post-covid-19/</p>
-<p>This article does an overview of rent changes in the U.S. and then discusses the county and zip codes with the highest rent increase. It looks closer at Arizona and San Francisco, finding that Maricopa and Pinal counties in Arizona have the highest rent increase from 2020-2023 and that San Francisco has large rent differences by zip code. This literature also discusses in-depth the functions of FMR and how they measure final rent prices. This reading shows that COVID-19 increased rent prices but also had some outliers of counties with decreasing rent price changes.</p>
+<p>The article titled, “Where are rents rising post COVID-19?,” does an overview of rent changes in the U.S. and then discusses the county and zip codes with the highest rent increase. It looks closer at Arizona and San Francisco, finding that Maricopa and Pinal counties in Arizona have the highest rent increase from 2020-2023 and that San Francisco has large rent differences by zip code. This literature also discusses in-depth the functions of FMR and how they measure final rent prices. This reading shows that COVID-19 increased rent prices but also had some outliers of counties with decreasing rent price changes. Compared to this article that reserached FMR changes throughout the U.S., we will focus on analyzing the rent price changes in North Carolina. USA Facts also has adjusted for inflation in which our research does not count for inflation.</p>
 </section>
 <section id="data" class="level1">
 <h1>Data:</h1>
 <p>Below is an explanation of the variables we will use to create our visualizations and models. Our variables were derived from a pivoted version of the Department of Housing and Urban Development’s Office of Public Development and Research data set for the years 2020 through 2023.</p>
 <table class="table">
 <colgroup>
-<col style="width: 16%">
-<col style="width: 83%">
+<col style="width: 22%">
+<col style="width: 77%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -260,7 +261,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="which-counties-in-north-carolina-had-the-largest-rent-increases-after-covid-19" class="level3">
 <h3 class="anchored" data-anchor-id="which-counties-in-north-carolina-had-the-largest-rent-increases-after-covid-19">Which counties in North Carolina had the largest rent increases after COVID-19?</h3>
-<p><strong>North Carolina counties with fair market rent increasing by 25% or more from 2020 to 2023</strong></p>
+<p><strong>North Carolina counties with fair market rent increasing by 20% or more from 2020 to 2023</strong></p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
@@ -323,10 +324,118 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <td style="text-align: left;">Tyrrell County</td>
 <td style="text-align: right;">26.04116</td>
 </tr>
+<tr class="even">
+<td style="text-align: left;">Anson County</td>
+<td style="text-align: right;">24.55669</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Watauga County</td>
+<td style="text-align: right;">24.29775</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Guilford County</td>
+<td style="text-align: right;">23.46933</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Randolph County</td>
+<td style="text-align: right;">23.46933</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cabarrus County</td>
+<td style="text-align: right;">23.44487</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gaston County</td>
+<td style="text-align: right;">23.44487</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mecklenburg County</td>
+<td style="text-align: right;">23.44487</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Union County</td>
+<td style="text-align: right;">23.44487</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Lee County</td>
+<td style="text-align: right;">22.99537</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Cumberland County</td>
+<td style="text-align: right;">22.48872</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Beaufort County</td>
+<td style="text-align: right;">21.64400</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Franklin County</td>
+<td style="text-align: right;">21.55001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Johnston County</td>
+<td style="text-align: right;">21.55001</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Wake County</td>
+<td style="text-align: right;">21.55001</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bladen County</td>
+<td style="text-align: right;">21.50306</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Greene County</td>
+<td style="text-align: right;">21.17567</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Carteret County</td>
+<td style="text-align: right;">21.10850</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Edgecombe County</td>
+<td style="text-align: right;">20.96983</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Nash County</td>
+<td style="text-align: right;">20.96983</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Avery County</td>
+<td style="text-align: right;">20.94036</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rockingham County</td>
+<td style="text-align: right;">20.66583</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rutherford County</td>
+<td style="text-align: right;">20.57969</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chatham County</td>
+<td style="text-align: right;">20.54425</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Durham County</td>
+<td style="text-align: right;">20.54425</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Orange County</td>
+<td style="text-align: right;">20.54425</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stanly County</td>
+<td style="text-align: right;">20.51374</td>
+</tr>
 </tbody>
 </table>
 </div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 39</code></pre>
 </div>
+</div>
+<p>The table above lists all of the North Carolina counties that saw an increase in fair market rents over 20% or greater from the beginning of COVID-19 (2020) to the end of COVID-19 (2023). In total, 39 out of 100 North Carolina counties saw an increase in fair market rents of 20% or more.</p>
 </section>
 <section id="which-counties-in-north-carolina-had-the-largest-decrease-in-rents-after-covid-19" class="level3">
 <h3 class="anchored" data-anchor-id="which-counties-in-north-carolina-had-the-largest-decrease-in-rents-after-covid-19">Which counties in North Carolina had the largest decrease in rents after COVID-19?</h3>
@@ -358,18 +467,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="report_files/figure-html/box-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>To test our hypothesis, we will use a linear regression model that looks how prices have changed in North Carolina as a result of COVID.</p>
+<p>We will use a linear regression model that looks how prices have changed in North Carolina as a result of COVID-19 and to predict future pricing if COIVD-19 pricing trends continue.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>rent_averages <span class="ot">&lt;-</span> rents <span class="sc">|&gt;</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, bedrooms) <span class="sc">|&gt;</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(fmr)) <span class="sc">|&gt;</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> year <span class="sc">-</span> <span class="dv">2020</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>rent_averages <span class="ot">&lt;-</span> rents <span class="sc">|&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year, bedrooms) <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarize</span>(<span class="at">mean =</span> <span class="fu">mean</span>(fmr)) <span class="sc">|&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">year =</span> year <span class="sc">-</span> <span class="dv">2020</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`summarise()` has grouped output by 'year'. You can override using the
 `.groups` argument.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>rent_averages <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>rent_averages <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
@@ -483,13 +592,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>regression <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(mean <span class="sc">~</span> year <span class="sc">+</span> bedrooms, <span class="at">data =</span> rent_averages)</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>regression <span class="sc">|&gt;</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>() <span class="sc">|&gt;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>regression <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(mean <span class="sc">~</span> year <span class="sc">+</span> bedrooms, <span class="at">data =</span> rent_averages)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>regression <span class="sc">|&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>() <span class="sc">|&gt;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped">
 <thead>
@@ -547,7 +656,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tbody>
 </table>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(regression)<span class="sc">$</span>adj.r.squared</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glance</span>(regression)<span class="sc">$</span>adj.r.squared</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9925511</code></pre>
 </div>
@@ -576,8 +685,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="results" class="level1">
 <h1>Results:</h1>
-<p>We started with understanding the rent increases per county after COVID-19. The results of the change in fair market rent % shows that numerous amounts of county increased their percentages. One county had a 40% change in FMR, and one state had a -10% change in FRM. Most counties had a percent change of about 15-30% change. Our thesis estimated about a 20% increase post-COVID in which these results survey that the average change was about 25%.</p>
-<p>We also researched which countries in NC has the largest rent increases after COVID-19. Based on our outcomes, the research indicates that Transylvania Country has the highest change in FMR, resting at 41.53% change. On the contrary we also calculated the countries in NC with the lowest rent increases after COVID-19. Camden County with -12.9% and Hyde County with -3.93 percent change. Furthermore, we decided to dive into the FMR from 2020-2023 based on the number of bedrooms. Based on the results, each year gradually, all housing, regardless of the number of rooms increased.</p>
+<p>We started with understanding the rent increases per county after COVID-19. The results of the change in fair market rent % shows that numerous counties saw an increase in rents from 2020 to 2023. One county had a 40% change in FMR, and one county had a -10% change in FRM. Most counties had a percent change of about 15-30% change. We hypothesized that North Carolina counties saw a 20% increase in fair market rents from 2020 to 2023. Our analysis showed 39 out of 100 North Carolina counties saw an increase in fair market rents of 20% or more from 2020 to 2023. Additionally, we created a linear regression to help researchers predict how fair market rents will increase in the following years if price trends that occurred during COVID-19 continue to occur.</p>
+<p>We also researched which countries in NC has the largest rent increases after COVID-19. Based on our outcomes, the research indicates that Transylvania Country has the highest change in FMR, resting at 41.53% change. On the contrary we also calculated the countries in NC with the lowest rent increases after COVID-19. Camden County with -12.9% and Hyde County with -3.93% change from the fiscal year 2020 to 2023. Furthermore, we decided to dive into the FMR from 2020-2023 based on the number of bedrooms. Based on the results, each year gradually, all housing, regardless of the number of rooms increased.</p>
 <p>Our data analysis does not change the fair market rents increases or decreases to account for changes in inflation. We can improve on our analysis in the future by looking the fair market rents in North Carolina adjusted to account for inflation. Calculating the percent change in rents adjusted for inflation might allow us to make further conclusions, such as which counties in the state were the most impacted by COVID-19.</p>
 <p><strong>Sources:</strong></p>
 <p>https://www.huduser.gov/portal/datasets/fmr/fmrs/FY2023_code/2023bdrm_rent.odn?year=2023&amp;cbsasub=METRO33860M33860&amp;br_size=0</p>
