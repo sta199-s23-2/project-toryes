@@ -1,11 +1,7 @@
 <!-- ██ ███    ███ ██████   ██████  ██████  ████████  █████  ███    ██ ████████  -->
-
 <!-- ██ ████  ████ ██   ██ ██    ██ ██   ██    ██    ██   ██ ████   ██    ██     -->
-
 <!-- ██ ██ ████ ██ ██████  ██    ██ ██████     ██    ███████ ██ ██  ██    ██     -->
-
 <!-- ██ ██  ██  ██ ██      ██    ██ ██   ██    ██    ██   ██ ██  ██ ██    ██     -->
-
 <!-- ██ ██      ██ ██       ██████  ██   ██    ██    ██   ██ ██   ████    ██     -->
 
 <!-- BEFORE RENDERING: DOWNLOAD urbnmapr PACKAGE -->
@@ -23,7 +19,7 @@ execute:
   echo: true
 ---
 
-# Introduction and Data:
+# Introduction:
 
 For this research project, we will be investigating how the COVID-19 pandemic impacted fair market rents throughout the state of North Carolina. The COVID-19 pandemic delivered a huge blow to the economy and as a result there has been a steady increase in inflation despite pay rates remaining roughly the same (Bernstein and Tedeschi). This has greatly increased the cost of living with rent prices skyrocketing in multiple states (Bernstein and Tedeschi).
 
@@ -43,9 +39,20 @@ https://usafacts.org/articles/where-are-rents-rising-post-covid-19/
 
 This article does an overview of rent changes in the U.S. and then discusses the county and zip codes with the highest rent increase. It looks closer at Arizona and San Francisco, finding that Maricopa and Pinal counties in Arizona have the highest rent increase from 2020-2023 and that San Francisco has large rent differences by zip code. This literature also discusses in-depth the functions of FMR and how they measure final rent prices. This reading shows that COVID-19 increased rent prices but also had some outliers of counties with decreasing rent price changes.
 
-# Methodology:
+# Data:
 
-To test our hypothesis, we will use a linear regression model that looks how prices have changed in North Carolina as a result of COVID.
+Below is an explanation of the variables we will use to create our visualizations and models. Our variables were derived from a pivoted version of the Department of Housing and Urban Development's Office of Public Development and Research data set for the years 2020 through 2023.
+
+| Variable Name | Explanation                                                                                                                                                                                                     |
+|------------|-----------------------------------------------------------|
+| fmr           | The fair market rent as described above for a specified number of bedrooms and year.                                                                                                                            |
+| bedrooms      | The bedrooms variable indicates the number of bedrooms for a specific fair market rent value.                                                                                                                   |
+| countyname    | The county name for a specific fair market rent value.                                                                                                                                                          |
+| year          | The fiscal year for which data used to calculate the fair market rent value was collected.                                                                                                                      |
+| state_alpha   | The state for a specific fair market rent value. In our analysis, we focused on North Carolina, so all of our observations had a state_alpha equal to "NC".                                                     |
+| fmr_pct       | fmr_pct is a variable that we calculated in our analysis to use in our map graph. It represents the average change in fair market rent from 2020 for a specified year by county (irregardless of \# bedrooms) . |
+
+# Methodology:
 
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
 #| label: load data
@@ -163,16 +170,30 @@ means |>
 high_increase <- means |>
   filter(year == 2023) |>
   distinct(countyname, mean_rent, .keep_all = TRUE) |>
-  filter(mean_rent >= 25) |>
+  filter(mean_rent >= 15) |>
   ungroup() |>
   select(countyname, mean_rent) |>
   arrange(desc(mean_rent))
+
+num_counties <- means |>
+  filter(year == 2023) |>
+  distinct(countyname, mean_rent, .keep_all = TRUE) |>
+  nrow()
+
 
 colnames(high_increase) <- c("County Name", "Change in Fair Market Price (%)")
 
 high_increase |>
   kable()
+
+num_greater_15 <- high_increase |>
+  nrow()
+
+num_greater_15
+  
 ```
+
+The table above lists all of the North Carolina counties that saw an increase in fair market rents over 15% or greater from the beginning of COVID-19 (2020) to the end of COVID-19 (2023). In total, 67 out of 100 North Carolina counties saw an increase in fair market rents of 15% or more. 
 
 ### Which counties in North Carolina had the largest decrease in rents after COVID-19?
 
@@ -207,7 +228,7 @@ rents |>
                            "3" = "3 Bedrooms",
                            "4" = "4 Bedrooms"
                            )) |>
-  ggplot(aes(x = year, y = fmr, group = year, fill = as.factor(year))) +
+  ggplot(aes(y = year, x = fmr, group = year, fill = as.factor(year))) +
   geom_violin(show.legend = FALSE) +
   facet_wrap(facets = vars(bedrooms), nrow = 5) +
   labs(
@@ -216,6 +237,8 @@ rents |>
     title = "Fair Market Rents from 2020 to 2023\nbased on the number of bedrooms"
   )
 ```
+
+To test our hypothesis, we will use a linear regression model that looks how prices have changed in North Carolina as a result of COVID.
 
 ```{r}
 rent_averages <- rents |>
@@ -234,7 +257,7 @@ regression |>
   tidy() |>
   kable()
 
-glance(regression)$r.squared
+glance(regression)$adj.r.squared
 ```
 
 The linear regression model above can be used to find **estimate mean** fair market rents based on our data, if the trend in prices continues, even as the effects COVID-19 dwindle. From the linear regression model we can write an equation to estimate the mean fair market rents based on the number of years that have passed since 2020 and the number of bedrooms for the accommodation.
@@ -244,7 +267,11 @@ $$
 $$
 
 $$
-+ (22.56 * one\_bedroom) + (177.24 * two\_bedroom) + (448.62 * three\_bedroom) + (680.97 * four\_bedroom)
++\space(22.56 * one\_bedroom) + (177.24 * two\_bedroom)
+$$
+
+$$
++\space(448.62 * three\_bedroom) + (680.97 * four\_bedroom)
 $$
 
 *where one_bedroom, two_bedroom, three_bedroom, and four_bedroom are Boolean values that represent if the fair market rent based on the number of bedrooms.*
@@ -263,7 +290,7 @@ $$ In conclusion, from our linear regression model based on the mean FMRs from t
 
 # Results:
 
-We started with understanding the rent increases per county after COVID-19. The results of the change in fair market rent % shows that numerous amounts of county increased their percentages. One county had a 40% change in FMR, and one state had a -10% change in FRM. Most counties had a percent change of about 15-30% change. Our thesis estimated about a 20% increase post-COVID in which these results survey that the average change was about 25%.
+We started with understanding the rent increases per county after COVID-19. The results of the change in fair market rent % shows that numerous counties saw an increase in rents from 2020 to 2023. One county had a 40% change in FMR, and one county had a -10% change in FRM. Most counties had a percent change of about 15-30% change. We hypothesized that over 50% of North Carolina counties would see a 15% increase in fair market rents from 2020 to 2023. Our analysis showed 67 out of 100 North Carolina counties saw an increase in fair market rents of 15% or more from 2020 to 2023. Additionally, we created a linear regression to help researchers predict how fair market rents will increase in the following years if price trends that occurred during COVID-19 continue to occur. 
 
 We also researched which countries in NC has the largest rent increases after COVID-19. Based on our outcomes, the research indicates that Transylvania Country has the highest change in FMR, resting at 41.53% change. On the contrary we also calculated the countries in NC with the lowest rent increases after COVID-19. Camden County with -12.9% and Hyde County with -3.93 percent change. Furthermore, we decided to dive into the FMR from 2020-2023 based on the number of bedrooms. Based on the results, each year gradually, all housing, regardless of the number of rooms increased.
 
