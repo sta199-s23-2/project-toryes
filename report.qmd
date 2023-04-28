@@ -31,7 +31,11 @@ As proud Cameron Crazies, we want to analyze the extent of COVID-19's impact of 
 
 We will use data collected by the Department of Housing and Urban Development's Office of Public Development and Research (HUD's PD&R). HUD PD&R Data collection started in 1983 based on surveys of local housing markets. Now, housing authorities conduct surveys on their behalf, along with accepting telephone or mail surveys. Their full collection of data is divided by year, then state, and then county. For the purposes of our project, we only included data from North Carolina to compare between NC counties. Our data set's variables include state, year, county name, number of bedrooms, and Fair Market Rent (FMR) price. FMR is the amount an individual is likely to pay for rent in a particular area based on the term length listed by the landlord (HUD). They "are estimates of 40th percentile gross rents for standard quality units within a metropolitan area or nonmetropolitan county." In addition, the "year" variable for FMR's is based off fiscal year, which is from October 1 of the previous year to September 30th of the current year (for example FY 2020 consists of data from 10/1/19 to 9/30/20).
 
-Ethical concerns may involve the tenants in the property being disturbed by survey collectors or numerous telephone calls requesting for surveys. Another issue with privacy could be that tenants may not want everyone to know the rent prices of the area they live in. There is also an ethical concern regarding the areas and individuals being surveyed and how those results could alter rent prices alongside inflation.
+Ethical concerns may involve the tenants in the property being disturbed by survey collectors or numerous telephone calls requesting for surveys. Another issue with privacy could be that tenants may not want everyone to know the rent prices of the area they live in. There is also an ethical concern regarding the areas and individuals being surveyed and how those results could alter rent prices alongside inflation.cFor our hypothesis, we predict that most North Carolina counties saw an increase in 20% in Fair Market Rent Prices.
+
+For our hypothesis, we predict that most North Carolina counties saw an increase in 20% in Fair Market Rent Prices.
+
+# 
 
 # Literature Review:
 
