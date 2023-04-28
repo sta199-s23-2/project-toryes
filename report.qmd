@@ -1,7 +1,11 @@
 <!-- ██ ███    ███ ██████   ██████  ██████  ████████  █████  ███    ██ ████████  -->
+
 <!-- ██ ████  ████ ██   ██ ██    ██ ██   ██    ██    ██   ██ ████   ██    ██     -->
+
 <!-- ██ ██ ████ ██ ██████  ██    ██ ██████     ██    ███████ ██ ██  ██    ██     -->
+
 <!-- ██ ██  ██  ██ ██      ██    ██ ██   ██    ██    ██   ██ ██  ██ ██    ██     -->
+
 <!-- ██ ██      ██ ██       ██████  ██   ██    ██    ██   ██ ██   ████    ██     -->
 
 <!-- BEFORE RENDERING: DOWNLOAD urbnmapr PACKAGE -->
@@ -31,8 +35,6 @@ Ethical concerns may involve the tenants in the property being disturbed by surv
 
 For our hypothesis, we predict that most North Carolina counties saw an increase in 20% in Fair Market Rent Prices.
 
-# 
-
 # Literature Review:
 
 https://usafacts.org/articles/where-are-rents-rising-post-covid-19/
@@ -44,7 +46,7 @@ This article does an overview of rent changes in the U.S. and then discusses the
 Below is an explanation of the variables we will use to create our visualizations and models. Our variables were derived from a pivoted version of the Department of Housing and Urban Development's Office of Public Development and Research data set for the years 2020 through 2023.
 
 | Variable Name | Explanation                                                                                                                                                                                                     |
-|------------|-----------------------------------------------------------|
+|----------------|--------------------------------------------------------|
 | fmr           | The fair market rent as described above for a specified number of bedrooms and year.                                                                                                                            |
 | bedrooms      | The bedrooms variable indicates the number of bedrooms for a specific fair market rent value.                                                                                                                   |
 | countyname    | The county name for a specific fair market rent value.                                                                                                                                                          |
@@ -193,7 +195,7 @@ num_greater_15
   
 ```
 
-The table above lists all of the North Carolina counties that saw an increase in fair market rents over 15% or greater from the beginning of COVID-19 (2020) to the end of COVID-19 (2023). In total, 67 out of 100 North Carolina counties saw an increase in fair market rents of 15% or more. 
+The table above lists all of the North Carolina counties that saw an increase in fair market rents over 15% or greater from the beginning of COVID-19 (2020) to the end of COVID-19 (2023). In total, 67 out of 100 North Carolina counties saw an increase in fair market rents of 15% or more.
 
 ### Which counties in North Carolina had the largest decrease in rents after COVID-19?
 
@@ -290,7 +292,7 @@ $$ In conclusion, from our linear regression model based on the mean FMRs from t
 
 # Results:
 
-We started with understanding the rent increases per county after COVID-19. The results of the change in fair market rent % shows that numerous counties saw an increase in rents from 2020 to 2023. One county had a 40% change in FMR, and one county had a -10% change in FRM. Most counties had a percent change of about 15-30% change. We hypothesized that over 50% of North Carolina counties would see a 15% increase in fair market rents from 2020 to 2023. Our analysis showed 67 out of 100 North Carolina counties saw an increase in fair market rents of 15% or more from 2020 to 2023. Additionally, we created a linear regression to help researchers predict how fair market rents will increase in the following years if price trends that occurred during COVID-19 continue to occur. 
+We started with understanding the rent increases per county after COVID-19. The results of the change in fair market rent % shows that numerous counties saw an increase in rents from 2020 to 2023. One county had a 40% change in FMR, and one county had a -10% change in FRM. Most counties had a percent change of about 15-30% change. We hypothesized that over 50% of North Carolina counties would see a 15% increase in fair market rents from 2020 to 2023. Our analysis showed 67 out of 100 North Carolina counties saw an increase in fair market rents of 15% or more from 2020 to 2023. Additionally, we created a linear regression to help researchers predict how fair market rents will increase in the following years if price trends that occurred during COVID-19 continue to occur.
 
 We also researched which countries in NC has the largest rent increases after COVID-19. Based on our outcomes, the research indicates that Transylvania Country has the highest change in FMR, resting at 41.53% change. On the contrary we also calculated the countries in NC with the lowest rent increases after COVID-19. Camden County with -12.9% and Hyde County with -3.93 percent change. Furthermore, we decided to dive into the FMR from 2020-2023 based on the number of bedrooms. Based on the results, each year gradually, all housing, regardless of the number of rooms increased.
 
