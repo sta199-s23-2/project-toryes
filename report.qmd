@@ -240,7 +240,7 @@ rents |>
   )
 ```
 
-To test our hypothesis, we will use a linear regression model that looks how prices have changed in North Carolina as a result of COVID.
+We will use a linear regression model that looks how prices have changed in North Carolina as a result of COVID-19 and to predict future pricing if COIVD-19 pricing trends continue.
 
 ```{r}
 rent_averages <- rents |>
