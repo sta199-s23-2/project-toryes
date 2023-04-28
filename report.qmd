@@ -164,7 +164,7 @@ means |>
 
 ### Which counties in North Carolina had the largest rent increases after COVID-19?
 
-**North Carolina counties with fair market rent increasing by 25% or more from 2020 to 2023**
+**North Carolina counties with fair market rent increasing by 20% or more from 2020 to 2023**
 
 ```{r, warning = FALSE, echo = FALSE, message = FALSE}
 #| label: report highest increase counties
