@@ -172,7 +172,7 @@ means |>
 high_increase <- means |>
   filter(year == 2023) |>
   distinct(countyname, mean_rent, .keep_all = TRUE) |>
-  filter(mean_rent >= 15) |>
+  filter(mean_rent >= 20) |>
   ungroup() |>
   select(countyname, mean_rent) |>
   arrange(desc(mean_rent))
@@ -188,14 +188,14 @@ colnames(high_increase) <- c("County Name", "Change in Fair Market Price (%)")
 high_increase |>
   kable()
 
-num_greater_15 <- high_increase |>
+num_greater_20 <- high_increase |>
   nrow()
 
-num_greater_15
+num_greater_20
   
 ```
 
-The table above lists all of the North Carolina counties that saw an increase in fair market rents over 15% or greater from the beginning of COVID-19 (2020) to the end of COVID-19 (2023). In total, 67 out of 100 North Carolina counties saw an increase in fair market rents of 15% or more.
+The table above lists all of the North Carolina counties that saw an increase in fair market rents over 20% or greater from the beginning of COVID-19 (2020) to the end of COVID-19 (2023). In total, 39 out of 100 North Carolina counties saw an increase in fair market rents of 20% or more.
 
 ### Which counties in North Carolina had the largest decrease in rents after COVID-19?
 
