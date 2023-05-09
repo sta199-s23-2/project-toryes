@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.0.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,15 +11,10 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
-  vertical-align: middle;
-}
 </style>
 
 
@@ -121,12 +116,6 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>This project was developed by <strong>Toryes</strong> For <a href="https://sta199-s23-2.github.io/">STA 199: Introduction to Data Science</a> at Duke University. The team is comprised of the following team members.</p>
-<ul>
-<li><p>Owen Jennings: Owen is a sophomore at Duke University studying computer science and biology. He is originally from Durham, North Carolina, but now lives in Indianapolis, IN. He enjoys playing pickleball and building things in his free time.</p></li>
-<li><p>Teddy Hur: Teddy is a sophomore studying public policy. He is from Irvine, California but currently lives in Washington Heights in New York City where his parents moved.</p></li>
-<li><p>Yadira Paz-Martinez: Yadira is a sophomore studying Public Policy and Human rights on the pre-law track. She is from Clinton, NC, and during her free time, she enjoys watching documentaries, cooking, and traveling with her friends.</p></li>
-<li><p>Rodricka Robinson is a junior on the pre-med track at Duke University. She studies Cultural Anthropology and Creative Writing. She is from New Orleans, Louisiana.</p></li>
-</ul>
 
 
 
@@ -200,8 +189,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      let href = ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);

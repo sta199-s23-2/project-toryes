@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.1.251">
+<meta name="generator" content="quarto-1.0.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,15 +11,10 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
-ul.task-list li input[type="checkbox"] {
-  width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
-  vertical-align: middle;
-}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -58,7 +53,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
+code span.bu { } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -71,7 +66,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.im { } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -674,13 +669,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><em>where one_bedroom, two_bedroom, three_bedroom, and four_bedroom are Boolean values that represent if the fair market rent based on the number of bedrooms.</em></p>
 <p>Using the above linear regression model, we can find the estimate mean fair market rent (fmr) for a specified year and number of bedrooms. This prediction or estimate will be based on our data from 2020 through 2023 that we used in our data analysis.</p>
 <p>For example, if we would like to predict the fair market rent of a 2 bedroom accommodation in the year 2024, we can use our linear regression model to predict the price assuming that the conditions from the years 2020 through 2023 hold:</p>
-<p><span class="math display">\[
-\widehat{fmr} = (50.36 * 4) + 606.12 + (177.24 * two\_bedroom)
-\]</span> <span class="math display">\[
-\widehat{fmr} = (50.36 * 4) + 606.12 + (177.24 * 1)
-\]</span> <span class="math display">\[
-\widehat{fmr} = 984.8
-\]</span> In conclusion, from our linear regression model based on the mean FMRs from the years 2020 through 2023 in North Carolina, we can predict that a 2 bedroom accommodation in the year 2024 in North Carolina will have an estimate mean fair market rent of 984.8 dollars, holding all else constant.</p>
+<p>$$ = (50.36 * 4) + 606.12 + (177.24 * two_bedroom)</p>
+<p><span class="math display">\[ \]</span></p>
+<p> = (50.36 * 4) + 606.12 + (177.24 * 1)</p>
+<p><span class="math display">\[ \]</span></p>
+<p> = 984.8 $$ In conclusion, from our linear regression model based on the mean FMRs from the years 2020 through 2023 in North Carolina, we can predict that a 2 bedroom accommodation in the year 2024 in North Carolina will have an estimate mean fair market rent of 984.8 dollars, holding all else constant.</p>
 </section>
 </section>
 <section id="results" class="level1">
@@ -699,10 +692,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 
 
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+<div id="quarto-appendix" class="default"><section class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
 
 <ol>
-<li id="fn1"><p><strong>Source: HUD Fair Market Rent Data. Change in fair market rent is calculated by finding the average percent change of fair market rents from 2020 to 2023 of 0 to 4 bedroom accommodations.</strong><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1" role="doc-endnote"><p><strong>Source: HUD Fair Market Rent Data. Change in fair market rent is calculated by finding the average percent change of fair market rents from 2020 to 2023 of 0 to 4 bedroom accommodations.</strong><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -774,8 +767,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      let href = ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
